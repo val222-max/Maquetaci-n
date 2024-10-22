@@ -1,0 +1,30 @@
+body{
+    background: rgb(255, 220, 226);
+}
+img{
+    width: 100%;
+}
+@media (min-width: 576px) {
+
+    body{
+        background: rgb(252, 218, 252);
+    
+    }
+    h1{
+        color: white;
+        text-align: center;
+}
+
+
+
+@media (min-width: 992px){
+    body{
+        background: #d6eafd;
+    }
+    img{
+        width: 49%;
+    }
+    h1{
+        color: rgb(70, 134, 218);
+        text-align: center;
+}

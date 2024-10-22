@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vogue</title>
+    <link rel="stylesheet" href="vogue.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <h1>Vogue</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Moda</a></li>
+                <li><a href="#">Belleza</a></li>
+                <li><a href="#">Estilo de Vida</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Sección principal -->
+    <section class="main">
+        <h2>Bienvenidos a Vogue</h2>
+        <p>Explora las últimas tendencias en moda, belleza y estilo de vida.</p>
+        <button class="button">Leer Más</button>
+        <button class="button">Suscribirse</button>
+    </section>
+
+    <!-- Carrusel de Imágenes -->
+<section class="carousel">
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="vogue.webp" alt="Imagen 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="carrusel4.avif" alt="Imagen 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="carrusel3.jpeg" alt="Imagen 3">
+        </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
+</section>
+
+    
+    <!-- Sección de artículos -->
+    <section class="articles">
+        <h2>Últimos Artículos</h2>
+        <div class="article-card">
+            <img src="Instagram_Cover_Vogue202021.webp" alt="Artículo 1">
+            <h3>Título del Artículo 1</h3>
+            <p>Descripción breve del artículo 1.</p>
+            <button class="button">Leer Más</button>
+        </div>
+        <div class="article-card">
+            <img src="voguenuevo.webp" alt="Artículo 2">
+            <h3>Título del Artículo 2</h3>
+            <p>Descripción breve del artículo 2.</p>
+            <button class="button">Leer Más</button>
+        </div>
+        <div class="article-card">
+            <img src="vogueultima.webp" alt="Artículo 3">
+            <h3>Título del Artículo 3</h3>
+            <p>Descripción breve del artículo 3.</p>
+            <button class="button">Leer Más</button>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2024 Vogue. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+let slideIndex = 0;
+
+function showSlides() {
+    const slides = document.querySelectorAll(".carousel-slide");
+    slides.forEach((slide, index) => {
+        slide.style.display = index === slideIndex ? "block" : "none";
+    });
+}
+
+function moveSlide(n) {
+    const slides = document.querySelectorAll(".carousel-slide");
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    showSlides();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    showSlides();
+    // Cambia de slide automáticamente cada 5 segundos
+    setInterval(() => moveSlide(1), 5000);
+});
+
+
+
+
+
+    </script>
+
+</body>
+</html>
